@@ -14,6 +14,7 @@
       ./sys/network.nix
       ./sys/system.nix
       ./sys/users.nix
+      ./sys/fonts.nix
     ];
   
   # Use mirros.
