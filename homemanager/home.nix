@@ -42,6 +42,7 @@
       plugins = [
         "git"
 	"z"
+	"man"
       ];
     };
 
