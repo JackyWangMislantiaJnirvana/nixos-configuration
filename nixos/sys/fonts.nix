@@ -3,9 +3,11 @@
 {
   fonts = {
     fonts = with pkgs; [
-      (nerdfonts.override {
-        fonts = [ "JetBrainsMono" "Ubuntu" ];
-      })
+      (
+        nerdfonts.override {
+          fonts = [ "JetBrainsMono" "Ubuntu" ];
+        }
+      )
     ];
   };
 }

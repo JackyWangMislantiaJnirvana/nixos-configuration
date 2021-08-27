@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./sys/boot.nix
       ./sys/desktop.nix
@@ -17,7 +18,7 @@
       ./sys/fonts.nix
       ./sys/shell.nix
     ];
-  
+
   # Use mirros.
   nix = {
     binaryCaches = [
@@ -55,4 +56,3 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 }
-
