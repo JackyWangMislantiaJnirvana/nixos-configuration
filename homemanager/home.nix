@@ -17,8 +17,8 @@
     okular
     tldr
     typora
-    vscode
     zoom
+    rnix-lsp
   ];
 
   programs.git = {
@@ -36,13 +36,13 @@
     # shellAliases = {
     #  
     # };
-    
+
     oh-my-zsh = {
       enable = true;
       plugins = [
         "git"
-	"z"
-	"man"
+        "z"
+        "man"
       ];
     };
 
@@ -64,6 +64,14 @@
 
       # package.disabled = true;
     };
+  };
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+    extensions = with pkgs.vscode-extensions; [
+      jnoortheen.nix-ide
+    ];
   };
 
   home.stateVersion = "21.11";
