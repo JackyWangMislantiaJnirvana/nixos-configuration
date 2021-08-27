@@ -25,6 +25,9 @@
     enable = true;
     userName = "Jacky Wang";
     userEmail = "wmjwld@live.cn";
+    iniContent = {
+      core.editor = "nvim";
+    };
   };
 
   programs.zsh = {
