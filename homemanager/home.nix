@@ -19,13 +19,25 @@
     typora
     vscode
     zoom
-    zsh
   ];
 
   programs.git = {
     enable = true;
     userName = "Jacky Wang";
     userEmail = "wmjwld@live.cn";
+  };
+
+  programs.zsh = {
+    enable = true;
+
+    # shellAliases = {
+    #  
+    # };
+    
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "z" ];
+    };
   };
 
   home.stateVersion = "21.11";
