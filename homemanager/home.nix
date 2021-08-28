@@ -19,6 +19,7 @@
     typora
     zoom
     rnix-lsp
+    tdesktop
   ];
 
   programs.git = {
@@ -71,6 +72,7 @@
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
+      vscodevim.vim
     ];
   };
 
