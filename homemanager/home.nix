@@ -20,6 +20,8 @@
     zoom
     rnix-lsp
     tdesktop
+    #gnome.gnome-boxes
+    #gparted
   ];
 
   programs.git = {

@@ -17,6 +17,7 @@
       ./sys/users.nix
       ./sys/fonts.nix
       ./sys/shell.nix
+      ./sys/virtualisation.nix
     ];
 
   # Use mirros.
