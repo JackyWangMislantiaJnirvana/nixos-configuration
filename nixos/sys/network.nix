@@ -19,8 +19,8 @@
     firewall.enable = false;
   };
 
-  services.v2ray = {
-    enable = true;
-    configFile = "/home/jacky/v2ray-config/v2ray.json";
-  };
+  #services.v2ray = {
+  #  enable = true;
+  #  configFile = "/home/jacky/v2ray-config/v2ray.json";
+  #};
 }
