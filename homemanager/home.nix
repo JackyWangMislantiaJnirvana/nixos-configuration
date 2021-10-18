@@ -16,7 +16,7 @@
     neovim
     okular
     tldr
-    typora
+    #typora
     zoom
     rnix-lsp
     tdesktop
