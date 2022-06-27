@@ -17,7 +17,7 @@
     okular
     tldr
     #typora
-    zoom
+    # zoom
     rnix-lsp
     tdesktop
     #gnome.gnome-boxes
