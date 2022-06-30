@@ -6,6 +6,11 @@
   home.username = "jacky";
   home.homeDirectory = "/home/jacky";
 
+  imports = [
+    ./programs/xmonad/default.nix
+    ./programs/rofi/default.nix
+  ];
+  
   # Packages
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
@@ -16,12 +21,8 @@
     neovim
     okular
     tldr
-    #typora
-    # zoom
     rnix-lsp
     tdesktop
-    #gnome.gnome-boxes
-    #gparted
   ];
 
   programs.git = {
@@ -36,9 +37,9 @@
   programs.zsh = {
     enable = true;
 
-    # shellAliases = {
-    #  
-    # };
+    shellAliases = {
+      tmacs = "emacs -nw";
+    };
 
     oh-my-zsh = {
       enable = true;
