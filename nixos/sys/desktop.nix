@@ -12,6 +12,13 @@
         packages = [ pkgs.dconf ];
     };
 
+    picom = {
+      enable = true;
+      vSync = true;
+      # It magically fixes the tearing problem
+      experimentalBackends = true;
+    };
+
     xserver = {
       # Enable the X11 windowing system.
       enable = true;
@@ -23,14 +30,22 @@
       libinput = {
         enable = true;
         mouse.naturalScrolling = true;
+        touchpad.naturalScrolling = true;
       };
-
-      displayManager.defaultSession = "none+xmonad";
 
       windowManager.xmonad = {
         enable = true;
         enableContribAndExtras = true;
+	extraPackages = hp: [
+	  hp.dbus
+	  hp.monad-logger
+	  hp.xmonad-contrib
+	  hp.xmonad
+	];
+	config = ./config.hs;
       };
+
+      displayManager.defaultSession = "none+xmonad";
     };
   };
 }

@@ -18,11 +18,12 @@
       ./sys/fonts.nix
       ./sys/shell.nix
       ./sys/virtualisation.nix
+      #./sys/services.nix
     ];
 
   # Use mirros.
   nix = {
-    binaryCaches = [
+    settings.substituters = [
       # Just use the official channel while in the US
       # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       # "https://mirror.sjtu.edu.cn/nix-channels/store"

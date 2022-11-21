@@ -7,14 +7,14 @@
   home.homeDirectory = "/home/jacky";
 
   imports = [
-    ./programs/xmonad/default.nix
+    # ./programs/xmonad/default.nix
     ./programs/rofi/default.nix
+    ./programs/emacs/default.nix
   ];
   
   # Packages
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    alacritty
     bat
     gh
     neofetch
@@ -24,6 +24,13 @@
     rnix-lsp
     tdesktop
   ];
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window.opacity = 0.8;
+    };
+  };
 
   programs.git = {
     enable = true;
@@ -38,7 +45,7 @@
     enable = true;
 
     shellAliases = {
-      tmacs = "emacs -nw";
+      tmacs = "emacsclient -nw";
     };
 
     oh-my-zsh = {
