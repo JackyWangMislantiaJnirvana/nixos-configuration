@@ -19,6 +19,13 @@
     firewall.enable = false;
   };
 
+  services.tailscale = {
+    enable = true;
+    
+    # This advertise the device as exit node
+    useRoutingFeatures = "server";
+  };
+
   #services.v2ray = {
   #  enable = true;
   #  configFile = "/home/jacky/v2ray-config/v2ray.json";

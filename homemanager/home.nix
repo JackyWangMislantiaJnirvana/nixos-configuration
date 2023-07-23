@@ -8,8 +8,8 @@
 
   imports = [
     # ./programs/xmonad/default.nix
-    ./programs/rofi/default.nix
-    ./programs/emacs/default.nix
+    #./programs/rofi/default.nix
+    #./programs/emacs/default.nix
   ];
   
   # Packages
@@ -18,17 +18,34 @@
     bat
     gh
     neofetch
-    neovim
     okular
     tldr
     rnix-lsp
     tdesktop
+    discord
+    jq
+    sage
   ];
+
+  programs.tmux = {
+    enable = true;
+  };
+  
+  programs.neovim = {
+    enable = true;
+    plugins = with pkgs.vimPlugins; [
+      vim-nix
+      vim-airline
+    ];
+    extraConfig = ''
+      set number relativenumber
+    '';
+  };
 
   programs.alacritty = {
     enable = true;
     settings = {
-      window.opacity = 0.8;
+      # window.opacity = 0.9;
     };
   };
 
@@ -54,6 +71,7 @@
         "git"
         "z"
         "man"
+        "vi-mode"
       ];
     };
 
